@@ -61,7 +61,8 @@ jobs:
         uses: cypress-io/github-action@v6
 
         with:
-          spec: cypress/e2e/cadastro-sucesso.cy.js,cypress/e2e/login-clinica.cy.js,cypress/e2e/dashboard.cy.js
+          spec:
+            cypress/e2e/cadastro-sucesso.cy.js,cypress/e2e/login-clinica.cy.js,cypress/e2e/dashboard.cy.js
 
             cypress/e2e/cadastro-sucesso.cy.js
 
@@ -73,5 +74,5 @@ jobs:
           record: true
 
         env:
-            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
