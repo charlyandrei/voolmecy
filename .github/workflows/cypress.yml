@@ -10,9 +10,14 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout
+        uses: actions/checkout@v4      
+      - name: Checkout
         uses: actions/checkout@v4
+        with: 
+          path: server      
       - name: Start Server BackEnd
         run: |
+          cd server
           npm install
           npm start &
           until [ "$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080)" == "200" ]; do
@@ -23,9 +28,9 @@ jobs:
         working-directory: server
       - name: Start Web App FrontEnd
         run: |
+          cd web
           npm install
-          npm start &
-        working-directory: web
+          npm start &        
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
