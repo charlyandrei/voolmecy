@@ -61,7 +61,7 @@ jobs:
         uses: cypress-io/github-action@v6
 
         with:
-          spec: |
+          spec: cypress/e2e/cadastro-sucesso.cy.js,cypress/e2e/login-clinica.cy.js,cypress/e2e/dashboard.cy.js
 
             cypress/e2e/cadastro-sucesso.cy.js
 
