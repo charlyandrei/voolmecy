@@ -1,2 +1,6 @@
-node_modules
+node_modules/
 cypress.env.json
+cypress/results/
+cypress/screenshots/
+cypress/videos/
+server/src/database/database.sqlite
