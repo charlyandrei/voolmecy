@@ -31,6 +31,7 @@ jobs:
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
+          browser: chrome
           spec: |
             cypress/e2e/cadastro-sucesso.cy.js
             cypress/e2e/login-clinica.cy.js
